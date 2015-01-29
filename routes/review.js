@@ -5,11 +5,18 @@ var router = express.Router();
 router.route('/')
 
 .get(function (req, res) {
+
 	Reviews.find({}, function (err, reviews) {
 		if (err) {
 			res.status(500).send({'error': err});
 		} else {
-			res.send(reviews);
+			var accept =req.get('Accept');
+			if(accept.indexOf("html")){
+				res.render('reviewsList', { title: 'Reviews', elements: reviews });
+			}
+			else{
+				res.send(reviews);
+			}
 		}
 	});
 });

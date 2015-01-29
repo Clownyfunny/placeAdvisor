@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    table
+      thead
+        td= 'Edit'
+        td= 'Name'
+        td= 'Type'
+        td= 'Rate'
+      each element in elements
+        tr
+          td= a(href='./reviews') Yolo
+          td= element.name
+          td= element.placeType
+          td= element.stars
