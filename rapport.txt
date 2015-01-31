@@ -8,4 +8,3 @@ Tp 1 - Questions :
 
 Tp 3 - Questions :
 1 - En tapant "/reviews" l'on obtient la liste des reviews parce que l'on a dit que la base de la route reviews était un get où l'on executait un find sur notre table des reviews.
-2 -
