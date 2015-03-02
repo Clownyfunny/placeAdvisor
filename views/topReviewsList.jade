@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Reviews Top 3 
+  table
+    th 
+    th Name
+    th Type
+    th Rate
+    th Action
+    each element in elements
+      tr
+        td
+          a(href='/reviews/' + element._id) +
+        td= element.name
+        td= element.placeType
+        td
+          - for (var x = 0; x <  element.stars; x++)
+            img(src="/images/star.jpg", alt="")
+        td
+          img(src='/images/bin.jpg', onClick='deleteThisReview("#{element._id}")')

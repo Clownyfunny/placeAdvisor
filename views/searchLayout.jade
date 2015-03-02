@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Search
+  form(method='GET' action='/search')
+    legend Name
+      input(id='reviewName', type='text', name="name")
+    legend Type
+      input(id='reviewPlaceType', type='text', name="placeType")
+    legend Rate
+      input(id='reviewStars', type='text', name="stars")
+    input(type='submit', value='Search')

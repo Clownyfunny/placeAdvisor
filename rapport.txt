@@ -1,7 +1,10 @@
-Questions : 
+Tp 1 - Questions : 
 1 - Lors de la saisie de la commande "npm init", un fichier package.json est créé. Le fichier contient alors les différentes options choisies lors de sa création et donc l'entete du package qui permet de l'identifier.
-2 - Le fichier permettant de lancer l'application est le "app.js". Il contient tout ce qu'il faut pour lancer le site, les routers, les différents packages intallés, les environnements définis... 
-3 - Le fichier permettant d'afficher le contenu de la page est  "www". Il se connecte aux ports et par requete http demande la page qui est appellé comme index.
+2 - Le fichier permettant de lancer l'application est le fichier "www". Il contient tout ce qu'il faut pour lancer le site, lescas d'erreur, les
+3 - Le fichier permettant d'afficher le contenu de la page est  "app.js". Il lie les routes, retrouver les styles ...
 4 - Une route en express permetde définir la page appelé lors que l'on va sur une adresse de notre site.
 5 - Les fichiers jade servent ici à définir le contenu de la page.
 6 - Un middleware est une sorte de fonction qui s'exécute à chaque fois que l'on va sur un lien défini.
+
+Tp 3 - Questions :
+1 - En tapant "/reviews" l'on obtient la liste des reviews parce que l'on a dit que la base de la route reviews était un get où l'on executait un find sur notre table des reviews.

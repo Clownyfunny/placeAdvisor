@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div(id='review')
+    img(src="/images/pen.png", onClick='showThisReviewEditForm(true)')
+    h1= element.name
+    h2= element.placeType
+    - for (var x = 0; x <  element.stars; x++)
+      img(src="/images/star.jpg", alt="")
+
+  div(id='edition' style='display:none')
+    input(id='reviewName', type='text', value='#{element.name}')
+    input(id='reviewPlaceType', type='text', value='#{element.placeType}')
+    input(id='reviewStars', type='text', value='#{element.stars}')
+    input(type='button', onclick='updateThisReview("#{element._id}")' value='Save')
+    input(type='button', onclick='showThisReviewEditForm(false)' value='Close')
+
+  div
+    a(href="/reviews") ALL REVIEWS
